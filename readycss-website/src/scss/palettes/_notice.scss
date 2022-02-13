@@ -1,0 +1,26 @@
+.palette-notice {
+  --scheme-background: var(--palette-notice-background);
+  --scheme-foreground: var(--palette-notice-foreground);
+  --scheme-middleground: var(--palette-notice-middleground);
+
+  --btn-color: var(--scheme-background);
+  --btn-text-color: var(--scheme-foreground);
+
+  --card-bg: var(--scheme-background);
+
+  --input-text-bg: var(--scheme-background);
+  --input-text-color: var(--scheme-foreground);
+  --input-text-border-color: var(--scheme-foreground);
+}
+
+.theme-light {
+  --palette-notice-background: khaki;
+  --palette-notice-foreground: black;
+  --palette-notice-middleground: darkorange;
+}
+
+.theme-dark {
+  --palette-notice-background: darkorange;
+  --palette-notice-foreground: white;
+  --palette-notice-middleground: orangered;
+}
