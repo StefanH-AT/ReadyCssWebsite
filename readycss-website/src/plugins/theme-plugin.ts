@@ -28,7 +28,9 @@ export function setTheme(dark: boolean) {
     console.log("Setting theme to " + dark ? "Dark" : "Light");
     if(dark) {
         document.querySelector("html").classList.add("theme-dark");
+        document.querySelector("html").classList.remove("theme-light");
     } else {
+        document.querySelector("html").classList.add("theme-light");
         document.querySelector("html").classList.remove("theme-dark");
     }
     updateThemeInfo(dark);

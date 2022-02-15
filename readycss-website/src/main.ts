@@ -3,6 +3,7 @@ import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
 import themePlugin from "./plugins/theme-plugin";
 
 import "./scss/main.scss";
+//import "highlight.js/styles/github.css";
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: () => import("./HomePage.vue") },

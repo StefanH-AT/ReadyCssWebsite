@@ -1,0 +1,41 @@
+.docs-page {
+
+  --docs-spacer: calc(var(--spacer) * 3);
+
+  margin-top: var(--docs-spacer);
+  margin-inline: auto;
+  max-width: 50rem;
+
+  .docs-group + .docs-group {
+    margin-top: var(--docs-spacer);
+  }
+
+  h2, h3, p {
+    margin: 0;
+  }
+
+  table {
+
+    --table-spacer: calc(var(--spacer) * 0.75);
+    --table-line-color: var(--scheme-shade-6);
+
+    width: 100%;
+    background-color: var(--scheme-shade-7);
+    padding: var(--table-spacer);
+    border-radius: var(--border-radius);
+    table-layout: fixed;
+
+    thead > tr {
+      border-bottom: var(--table-line-color) solid var(--border-width);
+    }
+
+    td, th {
+      padding: var(--table-spacer);
+    }
+
+    tr:nth-child(2n) {
+      background-color: var(--table-line-color);
+    }
+
+  }
+}

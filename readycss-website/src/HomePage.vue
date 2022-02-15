@@ -1,19 +1,18 @@
 <template>
+<div class="home">
 
-  <main>
+  <h2>Components</h2>
 
-    <h2>Components</h2>
+  <div class="components">
 
-    <div class="components">
+      <router-link class="component" to="/button">Buttons</router-link>
+      <router-link class="component" to="/textinputs">Text Inputs</router-link>
+      <router-link class="component" to="/check">Checkboxes</router-link>
+      <router-link class="component" to="/radio">Radio Buttons</router-link>
 
-        <router-link class="component" to="/button">Buttons</router-link>
-        <router-link class="component" to="/textinputs">Text Inputs</router-link>
-        <router-link class="component" to="/check">Checkboxes</router-link>
-        <router-link class="component" to="/radio">Radio Buttons</router-link>
+  </div>
 
-    </div>
-
-  </main>
+</div>
 </template>
 
 <script lang="ts">
@@ -24,11 +23,8 @@ export default {
 
 <style lang="scss" scoped>
 
-main {
-  margin-inline: auto;
-  max-width: 70rem;
+.home {
 
-  margin-top: 3rem;
   h2 {
     text-align: center;
   }
@@ -54,7 +50,7 @@ section {
   border-radius: var(--border-radius);
   text-align: center;
 
-  flex-basis: 25%;
+  flex-basis: 12rem;
 }
 
 </style>
