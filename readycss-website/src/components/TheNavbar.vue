@@ -24,17 +24,17 @@
 </template>
 
 <script lang="ts">
+import * as themePlugin from "../plugins/theme-plugin";
+
 export default {
   methods: {
     toggleTheme() {
-      document.querySelector("html").classList.toggle("theme-dark");
-    },
-    isDark() {
-      return document.querySelector("html").classList.contains("theme-dark");
+      themePlugin.toggleTheme();
     }
   },
   computed: {
-    themeName: (vm) => vm.isDark() ? "Dark" : "Light"
+    isDark: (vm) => themePlugin.isDark(),
+    themeName: (vm) => themePlugin.getThemeName()
   }
 }
 </script>

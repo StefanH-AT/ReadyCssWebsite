@@ -1,5 +1,6 @@
 import { createApp } from "vue";
 import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
+import themePlugin from "./plugins/theme-plugin";
 
 import "./scss/main.scss";
 
@@ -21,4 +22,5 @@ const app = createApp({
 });
 
 app.use(router);
+app.use(themePlugin);
 app.mount("#app");
