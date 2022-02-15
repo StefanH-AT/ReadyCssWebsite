@@ -1,10 +1,9 @@
 .palette-notice {
-  --scheme-background: var(--palette-notice-background);
-  --scheme-foreground: var(--palette-notice-foreground);
-  --scheme-middleground: var(--palette-notice-middleground);
+  --scheme-main: var(--palette-notice-main);
 
-  --btn-color: var(--scheme-background);
-  --btn-text-color: var(--scheme-foreground);
+  --btn-color: var(--scheme-main);
+  --btn-text-color: var(--scheme-background);
+  --btn-hover-color: var(--scheme-middleground);
 
   --card-bg: var(--scheme-background);
 
@@ -14,13 +13,9 @@
 }
 
 .theme-light {
-  --palette-notice-background: khaki;
-  --palette-notice-foreground: black;
-  --palette-notice-middleground: darkorange;
+  --palette-notice-main: darkorange;
 }
 
 .theme-dark {
-  --palette-notice-background: darkorange;
-  --palette-notice-foreground: white;
-  --palette-notice-middleground: orangered;
+  --palette-notice-main: orange;
 }

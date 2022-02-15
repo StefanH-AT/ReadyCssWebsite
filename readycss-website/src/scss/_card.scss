@@ -16,9 +16,15 @@
     color: var(--card-bg);
   }
 
-  .btn {
-    --btn-color: var(--scheme-foreground);
-    --btn-text-color: var(--scheme-background);
+  &.card-main {
+    --card-bg: var(--scheme-main);
+    color: var(--scheme-background);
+
+    .btn {
+      --btn-color: var(--scheme-background);
+      --btn-text-color: var(--scheme-main);
+      --btn-hover-color: var(--scheme-middleground);
+    }
   }
 
   header {
