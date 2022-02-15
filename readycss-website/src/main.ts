@@ -13,7 +13,7 @@ const router = createRouter({
     routes
 });
 
-import TheNavbar from "../components/TheNavbar.vue";
+import TheNavbar from "./components/TheNavbar.vue";
 const app = createApp({
     components: {
         TheNavbar
