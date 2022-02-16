@@ -35,6 +35,10 @@
           <input type="text" class="input-text" placeholder="">
           <label>Enter text...</label>
         </div>
+        <div class="input-text-shift-wrapper">
+          <input type="text" class="input-text input-text-underline" placeholder="">
+          <label>Enter text...</label>
+        </div>
       </code-sample>
     </div>
   </div>
