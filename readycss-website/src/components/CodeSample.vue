@@ -3,7 +3,7 @@
     <div class="code-sample-content" v-if="showPreview">
       <slot></slot>
     </div>
-    <pre class="code-sample-code"><code class="hljs" v-html="escapedCode"></code></pre>
+    <pre class="code-sample-code"><code class="hljs" v-html="code"></code></pre>
   </div>
 </template>
 
@@ -25,28 +25,23 @@ export default {
   },
   data() {
     return {
-      escapedCode: ""
+      code: ""
     }
   },
   methods: {
     updateCode(code: string) {
-      this.escapedCode += code + "\n";
+      this.code += code + "\n";
     }
   },
   computed: {
     showPreview: (vm) => vm.preview && vm.lang.toLowerCase() == "html"
   },
-  created() {
-    // I want to kill myself
-    setTimeout(() => {
-      const defaultSlots = this.$slots.default();
-      for (const slot of defaultSlots) {
+  mounted() {
+    this.$slots.default().forEach((slot) => {
         let html = slot.el.outerHTML;
-        html = hljs.default.highlight(html, { language: this.lang }).value
+        html = hljs.default.highlight(html, { language: this.lang }).value;
         this.updateCode(html);
-      }
-
-    }, 100);
+    });
   }
 }
 </script>
