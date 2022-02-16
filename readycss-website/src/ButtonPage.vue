@@ -77,8 +77,3 @@ export default {
   components: {CodeSample}
 }
 </script>
-
-<style scoped lang="scss">
-
-
-</style>
