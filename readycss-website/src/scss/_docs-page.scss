@@ -6,8 +6,17 @@
   margin-inline: auto;
   max-width: 50rem;
 
+  .docs-group,
+  .docs-subgroup {
+    display: flow-root;
+  }
+
   .docs-group + .docs-group {
     margin-top: var(--docs-spacer);
+  }
+
+  .docs-subgroup + .docs-subgroup {
+    margin-top: calc(var(--docs-spacer) * 0.5);
   }
 
   h2, h3, p {

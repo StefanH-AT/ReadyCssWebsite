@@ -7,7 +7,8 @@ import "./scss/main.scss";
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: () => import("./HomePage.vue") },
-    { path: "/button", component: () => import("./ButtonPage.vue") }
+    { path: "/button", component: () => import("./ButtonPage.vue") },
+    { path: "/textinputs", component: () => import("./InputTextPage.vue") }
 ];
 
 const router = createRouter({
