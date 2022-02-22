@@ -1,0 +1,21 @@
+.callout {
+  --callout-spacer: var(--spacer);
+
+  padding: var(--callout-spacer);
+
+  border: var(--scheme-main) solid var(--border-width);
+  border-radius: var(--border-radius);
+
+  strong {
+    font-weight: bold;
+  }
+
+  a {
+    color: var(--scheme-main);
+  }
+
+  &::selection,
+  *::selection {
+    background-color: var(--scheme-main);
+  }
+}
