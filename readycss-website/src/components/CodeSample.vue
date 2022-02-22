@@ -1,9 +1,8 @@
 <template>
   <div class="code-sample">
-    <div class="code-sample-content" v-if="showPreview">
-      <slot></slot>
+    <div class="code-sample-content" v-if="showPreview" v-html="code">
     </div>
-    <pre class="code-sample-code"><code class="hljs" v-html="code"></code></pre>
+    <pre class="code-sample-code"><code class="hljs" v-html="highlightedCode"></code></pre>
   </div>
 </template>
 
@@ -21,27 +20,22 @@ export default {
     preview: {
       type: Boolean,
       default: false
+    },
+    code: {
+      type: String,
+      required: true
     }
   },
   data() {
     return {
-      code: ""
-    }
-  },
-  methods: {
-    updateCode(code: string) {
-      this.code += code + "\n";
+      highlightedCode: null as hljs.HighlightResult
     }
   },
   computed: {
     showPreview: (vm) => vm.preview && vm.lang.toLowerCase() == "html"
   },
   mounted() {
-    this.$slots.default().forEach((slot) => {
-        let html = slot.el.outerHTML;
-        html = hljs.default.highlight(html, { language: this.lang }).value;
-        this.updateCode(html);
-    });
+      this.highlightedCode = hljs.default.highlight(this.code, { language: this.lang }).value;
   }
 }
 </script>
@@ -51,8 +45,6 @@ export default {
 .code-sample {
 
   --code-sample-spacer: var(--spacer);
-
-  margin-top: var(--code-sample-spacer);
 
   > .code-sample-content {
     padding: var(--code-sample-spacer);
