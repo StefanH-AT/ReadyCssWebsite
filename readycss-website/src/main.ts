@@ -17,9 +17,11 @@ const router = createRouter({
 });
 
 import TheNavbar from "./components/TheNavbar.vue";
+import TheFooter from "./components/TheFooter.vue";
 const app = createApp({
     components: {
-        TheNavbar
+        TheNavbar,
+        TheFooter
     }
 });
 
