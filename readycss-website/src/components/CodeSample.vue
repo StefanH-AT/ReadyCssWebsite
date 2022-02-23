@@ -1,8 +1,11 @@
 <template>
-  <div class="code-sample">
+  <div class="code-sample" v-if="code">
     <div class="code-sample-content" v-if="showPreview" v-html="code">
     </div>
     <pre class="code-sample-code"><code class="hljs" v-html="highlightedCode"></code></pre>
+  </div>
+  <div v-else class="card card-main">
+    Missing <code>code</code> attribute in code block
   </div>
 </template>
 
@@ -35,7 +38,10 @@ export default {
     showPreview: (vm) => vm.preview && vm.lang.toLowerCase() == "html"
   },
   mounted() {
-      this.highlightedCode = hljs.default.highlight(this.code, { language: this.lang }).value;
+    if(this.code) {
+      const highlighted = hljs.default.highlight(this.code, { language: this.lang });
+      this.highlightedCode = highlighted ? highlighted.value : "";
+    }
   }
 }
 </script>
