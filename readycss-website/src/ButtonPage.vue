@@ -5,9 +5,7 @@
     <p>
       Simple buttons. The default <code>.btn</code> class uses the main color.
     </p>
-    <code-sample lang="html" preview>
-      <button class="btn">Button</button>
-    </code-sample>
+    <code-sample lang="html" preview :code="exampleSimple"/>
 
   </div>
   <div class="docs-group">
@@ -15,31 +13,21 @@
     <p>
       The classes <code>.btn-fg</code> and <code>.btn-bg</code> can be used to apply the background or foreground colors to the button, instead of the main color.
     </p>
-    <code-sample lang="html" preview>
-      <button class="btn btn-fg">Foreground Button</button>
-      <button class="btn btn-bg">Background Button</button>
-    </code-sample>
+    <code-sample lang="html" preview :code="exampleVariants"/>
   </div>
   <div class="docs-group">
     <h3>Palettes</h3>
     <p>
       Apply a palette class to the button to change the color.
     </p>
-    <code-sample lang="html" preview>
-      <button class="btn palette-notice">Button</button>
-    </code-sample>
+    <code-sample lang="html" preview :code="examplePalettes"/>
   </div>
   <div class="docs-group">
     <h3>Outline Buttons</h3>
     <p>
       Outlined buttons are often used to represent less common actions.
     </p>
-    <code-sample lang="html" preview>
-      <button class="btn btn-outline">Button</button>
-      <button class="btn btn-outline palette-notice">Button</button>
-      <button class="btn btn-outline btn-bg">Button</button>
-      <button class="btn btn-outline btn-fg">Button</button>
-    </code-sample>
+    <code-sample lang="html" preview :code="exampleOutline"/>
   </div>
 
   <div class="docs-group">
@@ -74,6 +62,20 @@
 <script lang="ts">
 import CodeSample from "./components/CodeSample.vue";
 export default {
-  components: {CodeSample}
+  components: {CodeSample},
+  data() {
+    return {
+      exampleSimple: `<button class="btn">Button</button>`,
+      exampleVariants:
+`<button class="btn btn-fg">Foreground Button</button>
+<button class="btn btn-bg">Background Button</button>`,
+      examplePalettes: `<button class="btn palette-notice">Button</button>`,
+      exampleOutline:
+`<button class="btn btn-outline">Button</button>
+<button class="btn btn-outline palette-notice">Button</button>
+<button class="btn btn-outline btn-bg">Button</button>
+<button class="btn btn-outline btn-fg">Button</button>`
+    }
+  }
 }
 </script>
