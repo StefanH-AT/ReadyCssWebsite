@@ -7,7 +7,8 @@ import "./scss/main.scss";
 const routes: RouteRecordRaw[] = [
     { path: "/", component: () => import("./HomePage.vue"), name: "Color management library" },
     { path: "/button", component: () => import("./ButtonPage.vue"), name: "Buttons" },
-    { path: "/textinputs", component: () => import("./InputTextPage.vue"), name: "Text Inputs" }
+    { path: "/textinputs", component: () => import("./InputTextPage.vue"), name: "Text Inputs" },
+    { path: "/check", component: () => import("./CheckPage.vue"), name: "Checkboxes" }
 ];
 
 const router = createRouter({
