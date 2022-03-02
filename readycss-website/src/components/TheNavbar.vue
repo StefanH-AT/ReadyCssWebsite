@@ -5,10 +5,7 @@
       <h1><router-link to="/">ReadyCSS</router-link></h1>
       <nav>
         <ul class="nav-list horizontal align-start">
-          <li>Item1</li>
           <li><a href="https://github.com/StefanH-AT/ReadyCss"><i class="fab fa-github"></i> GitHub</a></li>
-          <li>Item3</li>
-          <li>Item4</li>
         </ul>
         <button @click="toggleTheme" class="switch-theme">{{ themeName }}</button>
       </nav>
@@ -33,8 +30,8 @@ export default {
     }
   },
   computed: {
-    isDark: (vm) => themePlugin.isDark(),
-    themeName: (vm) => themePlugin.getThemeName()
+    isDark: () => themePlugin.isDark(),
+    themeName: () => themePlugin.getThemeName()
   }
 }
 </script>
