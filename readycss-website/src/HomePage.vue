@@ -1,6 +1,11 @@
 <template>
 <div class="home">
 
+  <div class="banner">
+    <h2>ReadyCSS</h2>
+    <p>The only CSS library with a three layer color management system.</p>
+  </div>
+
   <h2>Components</h2>
 
   <div class="components">
@@ -28,6 +33,18 @@ export default {
   h2 {
     text-align: center;
   }
+}
+
+.banner {
+  h2 {
+    font-size: clamp(3rem, 80vw, 5rem);
+  }
+
+  p {
+    text-align: center;
+  }
+
+  min-height: 30vh;
 }
 
 section {
