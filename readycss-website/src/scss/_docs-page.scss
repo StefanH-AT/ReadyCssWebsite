@@ -23,7 +23,18 @@
     gap: calc(var(--docs-spacer) * 0.5);
   }
 
-  h2, h3, p {
+  h2, h3, h4 {
+    --heading-color: var(--scheme-main);
+    text-transform: uppercase;
+    margin-top: var(--docs-spacer);
+  }
+
+  h4 {
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  p {
     margin: 0;
   }
 
