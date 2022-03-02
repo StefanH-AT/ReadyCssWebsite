@@ -2,10 +2,7 @@
 
   <h2>Text Inputs</h2>
   <div class="docs-group">
-    <div>
-      <h3>Normal input</h3>
-      <p>Text inputs.</p>
-    </div>
+    <p>Normal form text inputs. Uses the main color for focus state.</p>
     <code-sample lang="html" preview :code="exampleSimple"/>
   </div>
   <div class="docs-group">
