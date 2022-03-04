@@ -82,6 +82,10 @@ nav {
     padding: var(--nav-pages-spacer) calc(var(--nav-pages-spacer) * 2);
     border-radius: 100rem;
 
+    display: grid;
+    place-items: center;
+    text-align: center;
+
     &:focus-visible {
       outline: none;
       background-color: var(--scheme-main);
