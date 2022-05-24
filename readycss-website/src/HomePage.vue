@@ -37,7 +37,7 @@ export default {
 
 .banner {
   h2 {
-    font-size: clamp(3rem, 80vw, 5rem);
+    font-size: clamp(2rem, 10vw, 5rem);
   }
 
   p {

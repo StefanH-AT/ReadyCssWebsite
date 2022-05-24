@@ -13,10 +13,13 @@
 
   </header>
   <div class="nav-pages">
-    <router-link to="/button">Buttons</router-link>
-    <router-link to="/textinputs">Text Inputs</router-link>
-    <router-link to="/check">Checkboxes</router-link>
-    <router-link to="/radio">Radio</router-link>
+    <div class="nav-pages-scroll">
+      <router-link to="/colors">Colors</router-link>
+      <router-link to="/button">Buttons</router-link>
+      <router-link to="/textinputs">Text Inputs</router-link>
+      <router-link to="/check">Checkboxes</router-link>
+      <router-link to="/radio">Radio</router-link>
+    </div>
   </div>
 </template>
 
@@ -66,21 +69,36 @@ nav {
 .nav-pages {
 
   --nav-pages-spacer: calc(var(--spacer) * 0.5);
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
 
-  display: flex;
-  justify-content: center;
-  gap: var(--nav-pages-spacer);
-
-  padding-block: var(--nav-pages-spacer);
+  padding: var(--nav-pages-spacer);
 
 
-  > a {
+  .nav-pages-scroll {
+    display: flex;
+    justify-content: start;
+    gap: var(--nav-pages-spacer);
+
+    overflow-x: auto;
+    touch-action: pan-y;
+  }
+
+
+  a {
     font-size: 0.85em;
     text-decoration: none;
     background-color: var(--scheme-shade-8);
     border: calc(var(--border-width) * 0.5) solid var(--scheme-shade-6);
     padding: var(--nav-pages-spacer) calc(var(--nav-pages-spacer) * 2);
     border-radius: 100rem;
+
+    display: grid;
+    place-items: center;
+    text-align: center;
+  
+    white-space: nowrap;
 
     &:focus-visible {
       outline: none;
