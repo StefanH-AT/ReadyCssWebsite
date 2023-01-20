@@ -1,8 +1,6 @@
 .palette-notice {
   --scheme-main: var(--palette-notice-main);
-
-  --btn-color: var(--scheme-main);
-  --btn-text-color: var(--scheme-background);
+  --scheme-main-hover: var(--palette-notice-main-hover);
 
   --card-bg: var(--scheme-background);
 
@@ -12,9 +10,11 @@
 }
 
 .theme-light {
-  --palette-notice-main: darkorange;
+  --palette-notice-main: hsl(33, 100%, 50%);
+  --palette-notice-main-hover: hsl(33, 100%, 45%);
 }
 
 .theme-dark {
-  --palette-notice-main: orange;
+  --palette-notice-main: hsl(39, 100%, 50%);
+  --palette-notice-main-hover: hsl(39, 100%, 45%);
 }

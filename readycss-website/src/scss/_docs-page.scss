@@ -44,9 +44,8 @@
     --table-line-color: var(--scheme-shade-6);
 
     width: 100%;
-    background-color: var(--scheme-shade-7);
     padding: var(--table-spacer);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     table-layout: fixed;
 
     thead > tr {
@@ -57,8 +56,13 @@
       padding: var(--table-spacer);
     }
 
+    th {
+        font-weight: bold;
+        text-align: left;
+    }
+
     tr:nth-child(2n) {
-      background-color: var(--table-line-color);
+      background-color: var(--scheme-shade-7);
     }
 
   }

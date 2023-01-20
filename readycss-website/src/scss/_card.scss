@@ -9,7 +9,7 @@
   padding: var(--card-spacer);
   color: var(--scheme-foreground);
 
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
 
   &::selection, *::selection {
     background-color: var(--scheme-foreground);
