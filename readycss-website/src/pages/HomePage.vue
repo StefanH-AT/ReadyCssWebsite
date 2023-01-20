@@ -64,7 +64,7 @@ section {
 .component {
   padding: var(--components-spacer);
   border: var(--border-width) solid var(--scheme-middleground);
-  border-radius: var(--border-radius);
+  border-radius: var(--radius);
   text-align: center;
 
   flex-basis: 12rem;

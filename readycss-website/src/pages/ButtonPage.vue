@@ -3,32 +3,39 @@
   <h2>Buttons</h2>
   <div class="docs-group">
     <p>
-      Simple buttons. The default <code>.btn</code> class uses the main color.
+      Simple buttons.
     </p>
-    <code-sample lang="html" preview :code="exampleSimple"/>
+    <code-sample lang="html" preview :code="examples.simple"/>
 
   </div>
   <div class="docs-group">
     <h3>Color variants</h3>
     <p>
-      The classes <code>.btn-fg</code> and <code>.btn-bg</code> can be used to apply the background or foreground colors to the button, instead of the main color.
+      The classes <code>.btn-main</code> and <code>.btn-fg</code> can be used to apply the background or foreground colors to the button, instead of the main color.
     </p>
-    <code-sample lang="html" preview :code="exampleVariants"/>
+    <code-sample lang="html" preview :code="examples.variants"/>
   </div>
   <div class="docs-group">
     <h3>Palettes</h3>
     <p>
       Apply a palette class to the button to change the color.
     </p>
-    <code-sample lang="html" preview :code="examplePalettes"/>
+    <code-sample lang="html" preview :code="examples.palettes"/>
   </div>
   <div class="docs-group">
-    <h3>Outline Buttons</h3>
+    <h3>Variations</h3>
     <p>
-      Outlined buttons are often used to represent less common actions.
+      Use one of the following classes to change the button's appearance.
     </p>
-    <code-sample lang="html" preview :code="exampleOutline"/>
+    <code-sample lang="html" preview :code="examples.variations"/>
   </div>
+  <div class="docs-group">
+  <h3>Groups</h3>
+  <p>
+    Use the <code>.btn-group</code> class to group buttons together.
+  </p>
+  <code-sample lang="html" preview :code="examples.groups"/>
+</div>
 
   <div class="docs-group">
     <h3>Properties</h3>
@@ -59,23 +66,25 @@
 
 </template>
 
-<script lang="ts">
-import CodeSample from "./components/CodeSample.vue";
-export default {
-  components: {CodeSample},
-  data() {
-    return {
-      exampleSimple: `<button class="btn">Button</button>`,
-      exampleVariants:
-`<button class="btn btn-fg">Foreground Button</button>
-<button class="btn btn-bg">Background Button</button>`,
-      examplePalettes: `<button class="btn palette-notice">Button</button>`,
-      exampleOutline:
-`<button class="btn btn-outline">Button</button>
-<button class="btn btn-outline palette-notice">Button</button>
-<button class="btn btn-outline btn-bg">Button</button>
-<button class="btn btn-outline btn-fg">Button</button>`
-    }
-  }
+<script lang="ts" setup>
+import CodeSample from "@/components/CodeSample.vue";
+const examples = {
+  simple:
+  `<button class="btn">Button</button>
+<button class="btn" disabled>Disabled Button</button>`,
+  variants:
+  `<button class="btn btn-main">Main Color Button</button>
+<button class="btn btn-fg">Foreground Button</button>`,
+  palettes: `<button class="btn btn-main palette-notice">Button</button>`,
+  variations:
+  `<button class="btn btn-sm">Button</button>
+<button class="btn btn-inline">Button</button>`,
+  groups:
+  `<div class="btn-group">
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+  <button class="btn">Button</button>
+</div>`
 }
 </script>
