@@ -1,6 +1,6 @@
 <template>
   <div class="code-sample" v-if="code">
-    <div class="code-sample-content" v-if="showPreview" v-html="code">
+    <div class="code-sample-content" v-if="shouldShowPreview" v-html="code">
     </div>
     <pre class="code-sample-code"><code class="hljs" v-html="highlightedCode"></code></pre>
   </div>
@@ -9,13 +9,12 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 
+import {ref, computed, onMounted} from "vue";
 import * as hljs from "highlight.js";
 
-export default {
-  name: "CodeSample",
-  props: {
+const props = defineProps({
     lang: {
       type: String,
       default: "plaintext"
@@ -28,22 +27,23 @@ export default {
       type: String,
       required: true
     }
-  },
-  data() {
-    return {
-      highlightedCode: null as hljs.HighlightResult
+});
+
+const highlightedCode = ref<hljs.HighlightResult>(null);
+
+const shouldShowPreview = computed(() => props.preview && props.lang.toLowerCase() == "html");
+
+onMounted(() => {
+    updateHighlighting();
+});
+
+function updateHighlighting() {
+    if(props.code) {
+      const highlighted = hljs.default.highlight(props.code, { language: props.lang });
+      highlightedCode.value = highlighted ? highlighted.value : "";
     }
-  },
-  computed: {
-    showPreview: (vm) => vm.preview && vm.lang.toLowerCase() == "html"
-  },
-  mounted() {
-    if(this.code) {
-      const highlighted = hljs.default.highlight(this.code, { language: this.lang });
-      this.highlightedCode = highlighted ? highlighted.value : "";
-    }
-  }
 }
+
 </script>
 
 <style scoped lang="scss">
@@ -55,7 +55,7 @@ export default {
   > .code-sample-content {
     padding: var(--code-sample-spacer);
     border: var(--scheme-shade-7) solid var(--border-width);
-    border-radius: var(--border-radius);
+    border-radius: var(--radius);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
   }

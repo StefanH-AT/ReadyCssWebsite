@@ -4,7 +4,8 @@
     <div class="nav">
       <h1><router-link to="/">ReadyCSS</router-link></h1>
       <nav>
-        <ul class="nav-list horizontal align-start">
+        <ul class="nav-list">
+          <li><router-link to="/gallery">Gallery</router-link></li>
           <li><a href="https://github.com/StefanH-AT/ReadyCss"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
         <button @click="toggleTheme" class="switch-theme">{{ themeName }}</button>
@@ -24,7 +25,7 @@
 </template>
 
 <script lang="ts">
-import * as themePlugin from "../plugins/theme-plugin";
+import * as themePlugin from "@/plugins/theme-plugin";
 
 export default {
   methods: {
@@ -44,6 +45,7 @@ export default {
 header {
   background-color: var(--scheme-shade-7);
   box-shadow: 0 0.1rem 0.75rem 0 var(--scheme-shadow);
+  padding-block: calc(var(--spacer) * 0.4);
 }
 
 .nav {
@@ -64,6 +66,13 @@ nav {
   display: flex;
   align-items: center;
   gap: var(--spacer);
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--spacer);
+  list-style: none;
+  padding-inline: 0;
 }
 
 .nav-pages {
