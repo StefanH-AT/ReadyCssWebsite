@@ -2,7 +2,7 @@
 
   <h2>Checkboxes</h2>
   <div class="docs-group">
-
+    <p>Checkboxes are created by adding add the <code>input-check</code> class to an HTML <code>input</code> of type <code>checkbox</code></p>
     <div class="callout">
       <p>
         <strong>Hint:</strong>
@@ -11,6 +11,11 @@
     </div>
     <code-sample lang="html" preview :code="exampleSimple"/>
 
+  </div>
+
+  <div class="docs-group">
+    <h3>Other icons</h3>
+    <code-sample lang="html" preview :code="exampleCross"/>
   </div>
 
   <div class="docs-group">
@@ -29,8 +34,10 @@ export default {
     return {
       exampleSimple: `<input class="input-check" type="checkbox" id="check1">
 <label for="check1">Check me out</label>`,
-      examplePalette: `<input class="input-check palette-notice" type="checkbox" id="check2">
-<label for="check2">Check me out</label>`
+      exampleCross: `<input class="input-check input-check-cross" type="checkbox" id="check2">
+<label for="check2">Check me out</label>`,
+      examplePalette: `<input class="input-check palette-notice" type="checkbox" id="check3">
+<label for="check3">Check me out</label>`
     }
   }
 }
