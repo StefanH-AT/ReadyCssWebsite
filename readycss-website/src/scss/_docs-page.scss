@@ -15,18 +15,9 @@
   max-width: min(50rem, 90%);
   width: 100%; // Desired width is 100%, but it is being limited by the max-width
 
-  article,
-  .docs-group,
-  .docs-subgroup {
-    display: flex;
-    flex-direction: column;
-    gap: calc(var(--docs-spacer) * 0.5);
-  }
-
   h2, h3, h4 {
     --heading-color: var(--scheme-main);
     text-transform: uppercase;
-    margin-top: var(--docs-spacer);
   }
 
   h4 {
@@ -66,4 +57,17 @@
     }
 
   }
+}
+
+.docs-group {
+  display: flow-root;
+}
+
+.docs-group + .docs-group {
+  margin-top: var(--docs-spacer);
+}
+
+// All elements that are direct children of .docs-group, except for the last one
+.docs-group > * + * {
+  margin-top: calc(var(--docs-spacer) * 0.25);
 }
