@@ -68,6 +68,11 @@
 }
 
 // All elements that are direct children of .docs-group, except for the last one
-.docs-group > * + * {
+:is(.docs-group, .docs-subgroup) > * + * {
   margin-top: calc(var(--docs-spacer) * 0.25);
 }
+
+.docs-subgroup {
+  margin-top: var(--docs-spacer);
+}
+
