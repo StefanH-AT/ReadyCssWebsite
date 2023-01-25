@@ -45,7 +45,7 @@ export default {
 header {
   background-color: var(--scheme-shade-7);
   box-shadow: 0 0.1rem 0.75rem 0 var(--scheme-shadow);
-  padding-block: calc(var(--spacer) * 0.4);
+  padding-block: calc(var(--spacer) * 0.75);
 }
 
 .nav {
@@ -82,7 +82,7 @@ nav {
   max-width: 100%;
   margin-inline: auto;
 
-  padding: var(--nav-pages-spacer);
+  padding: var(--spacer);
 
 
   .nav-pages-scroll {
