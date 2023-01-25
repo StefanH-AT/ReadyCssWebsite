@@ -32,11 +32,11 @@ export default {
   components: {CodeSample},
   data() {
     return {
-      exampleSimple: `<input class="input-check" type="checkbox" id="check1">
+      exampleSimple: `<input class="checkbox" type="checkbox" id="check1">
 <label for="check1">Check me out</label>`,
-      exampleCross: `<input class="input-check input-check-cross" type="checkbox" id="check2">
+      exampleCross: `<input class="checkbox input-check-cross" type="checkbox" id="check2">
 <label for="check2">Check me out</label>`,
-      examplePalette: `<input class="input-check palette-notice" type="checkbox" id="check3">
+      examplePalette: `<input class="checkbox palette-notice" type="checkbox" id="check3">
 <label for="check3">Check me out</label>`
     }
   }

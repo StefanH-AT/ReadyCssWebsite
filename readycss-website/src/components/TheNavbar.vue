@@ -18,7 +18,7 @@
       <router-link to="/colors">Colors</router-link>
       <router-link to="/button">Buttons</router-link>
       <router-link to="/textinputs">Text Inputs</router-link>
-      <router-link to="/check">Checkboxes</router-link>
+      <router-link to="/checkbox">Checkboxes</router-link>
       <router-link to="/radio">Radio</router-link>
     </div>
   </div>
