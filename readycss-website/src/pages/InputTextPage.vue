@@ -5,17 +5,14 @@
     <p>Normal form text inputs. Uses the main color for focus state.</p>
     <code-sample lang="html" preview :code="exampleSimple"/>
   </div>
+
   <div class="docs-group">
-    <div>
-      <h3>Other styles</h3>
-      <p>Other styles of inputs are available by appending an extra class.</p>
-    </div>
+    <h3>Other styles</h3>
+    <p>Other styles of inputs are available by appending an extra class.</p>
 
     <div class="docs-subgroup">
-      <div>
-        <h4>Underline</h4>
-        <p>Minimal border</p>
-      </div>
+      <h4>Underline</h4>
+      <p>Minimal border</p>
       <code-sample lang="html" preview :code="exampleUnderline"/>
     </div>
 
@@ -47,15 +44,15 @@ export default {
   components: {CodeSample},
   data() {
     return {
-      exampleSimple: `<input type="text" class="input-text" placeholder="Enter text..."/>`,
-      exampleUnderline: `<input type="text" class="input-text input-text-underline" placeholder="Enter text...">`,
+      exampleSimple: `<input type="text" class="text-input" placeholder="Enter text..."/>`,
+      exampleUnderline: `<input type="text" class="text-input text-input-underline" placeholder="Enter text...">`,
       exampleShift:
-`<div class="input-text-shift-wrapper">
-  <input type="text" class="input-text" placeholder="">
+`<div class="text-input-shift-wrapper">
+  <input type="text" class="text-input" placeholder="">
   <label>Enter text...</label>
 </div>
-<div class="input-text-shift-wrapper">
-  <input type="text" class="input-text input-text-underline" placeholder="">
+<div class="text-input-shift-wrapper">
+  <input type="text" class="text-input text-input-underline" placeholder="">
   <label>Enter text...</label>
 </div>`
     }
