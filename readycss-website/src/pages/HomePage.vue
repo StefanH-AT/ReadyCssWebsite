@@ -12,7 +12,7 @@
 
       <router-link class="component" to="/button">Buttons</router-link>
       <router-link class="component" to="/textinputs">Text Inputs</router-link>
-      <router-link class="component" to="/check">Checkboxes</router-link>
+      <router-link class="component" to="/checkbox">Checkboxes</router-link>
       <router-link class="component" to="/radio">Radio Buttons</router-link>
 
   </div>
