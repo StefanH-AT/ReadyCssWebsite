@@ -1,9 +1,14 @@
-@use "readycss/main" as readycss;
+@use "readycss/all" as readycss;
 
 @use "palettes/palettes";
+@use "app";
 @use "card";
 @use "callout";
 @use "docs-page";
 
 @use "fonts";
+@use "fontawesome/fontawesome";
+@use "fontawesome/regular";
+@use "fontawesome/solid";
+@use "fontawesome/brands";
 @use "util";

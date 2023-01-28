@@ -43,9 +43,9 @@
 
 // sets a specific icon family to use alongside style + icon mixins
 
-// convenience mixins for declaring pseudo-elements by CSS variable,
+// convenience mixins for declaring pseudo-components by CSS variable,
 // including all style-specific font properties, and both the ::before
-// and ::after elements in the duotone case.
+// and ::after components in the duotone case.
 @mixin fa-icon-solid($fa-var) {
   @extend %fa-icon;
   @extend .fa-solid;

@@ -33,6 +33,7 @@ const props = defineProps<{
 }
 
 .switcher > * {
+  width: 100%;
   flex-grow: 1;
   flex-basis: calc((v-bind("props.threshold") - 100%) * 999);
 }

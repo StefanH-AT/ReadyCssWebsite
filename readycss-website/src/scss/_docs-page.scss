@@ -1,19 +1,10 @@
-#app {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
 
-.docs-page {
+
+.docs {
 
   flex-grow: 1;
 
   --docs-spacer: calc(var(--spacer) * 3);
-
-  margin-top: var(--docs-spacer);
-  margin-inline: auto;
-  max-width: min(50rem, 90%);
-  width: 100%; // Desired width is 100%, but it is being limited by the max-width
 
   h2, h3, h4 {
     --heading-color: var(--scheme-main);
@@ -67,7 +58,7 @@
   margin-top: var(--docs-spacer);
 }
 
-// All elements that are direct children of .docs-group, except for the last one
+// All components that are direct children of .docs-group, except for the last one
 :is(.docs-group, .docs-subgroup) > * + * {
   margin-top: calc(var(--docs-spacer) * 0.25);
 }

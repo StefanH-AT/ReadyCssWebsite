@@ -6,18 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" href="/fonts/spline_sans/SplineSans-Regular.ttf" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="/fonts/spline_sans/SplineSans-Bold.ttf" as="font" type="font/ttf" crossorigin>
+    <script type="module" src="/src/main.ts" defer></script>
     <title>ReadyCss Website</title>
 </head>
 <body>
 <div id="app">
     <the-navbar></the-navbar>
-    <main class="docs-page">
-        <article>
-            <router-view></router-view>
-        </article>
-    </main>
+    <router-view></router-view>
     <the-footer></the-footer>
 </div>
-<script type="module" src="/src/main.ts"></script>
 </body>
 </html>

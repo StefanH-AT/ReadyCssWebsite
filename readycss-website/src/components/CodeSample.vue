@@ -29,20 +29,12 @@ const props = defineProps({
     }
 });
 
-const highlightedCode = ref<hljs.HighlightResult>(null);
+const highlightedCode = computed(() => {
+  const highlighted = hljs.default.highlight(props.code, { language: props.lang });
+  return highlighted ? highlighted.value : "";
+})
 
 const shouldShowPreview = computed(() => props.preview && props.lang.toLowerCase() == "html");
-
-onMounted(() => {
-    updateHighlighting();
-});
-
-function updateHighlighting() {
-    if(props.code) {
-      const highlighted = hljs.default.highlight(props.code, { language: props.lang });
-      highlightedCode.value = highlighted ? highlighted.value : "";
-    }
-}
 
 </script>
 
@@ -53,6 +45,7 @@ function updateHighlighting() {
   --code-sample-spacer: var(--spacer);
 
   > .code-sample-content {
+    background: var(--scheme-background);
     padding: var(--code-sample-spacer);
     border: var(--scheme-shade-7) solid var(--border-width);
     border-radius: var(--radius);
@@ -60,7 +53,7 @@ function updateHighlighting() {
     border-bottom-right-radius: 0;
   }
 
-  // Selects only .code-sample-code elements that are after .code-sample-content
+  // Selects only .code-sample-code components that are after .code-sample-content
   .code-sample-content + .code-sample-code > code {
     border-top-left-radius: 0;
     border-top-right-radius: 0;

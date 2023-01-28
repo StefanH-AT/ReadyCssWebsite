@@ -1,13 +1,22 @@
 .callout {
   --callout-spacer: var(--spacer);
 
-  padding: var(--callout-spacer);
-
   border: var(--scheme-main) solid var(--border-width);
   border-radius: var(--radius);
 
-  strong {
+  overflow: hidden;
+
+  .callout-head {
+    display: block;
+    padding: var(--callout-spacer);
+    background: var(--scheme-main);
     font-weight: bold;
+    color: var(--scheme-background);
+  }
+
+  .callout-body {
+    padding: var(--callout-spacer);
+    background: var(--scheme-surface-0);
   }
 
   a {
