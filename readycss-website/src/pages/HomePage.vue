@@ -77,13 +77,10 @@
           <code-sample lang="html" :code="sampleLayerPalette" preview></code-sample>
 
           <div class="colorsystem--layer-actions">
-            <strong>Change palette to</strong>
+            <strong>Switch palette</strong>
             <div class="btn-group">
-              <button class="btn" @click="sampleLayerPaletteClasses = 'palette-notice'">palette-notice</button>
-              <button class="btn" @click="sampleLayerPaletteClasses = 'palette-default'">palette-default</button>
-              <button class="btn" @click="sampleLayerPaletteClasses = 'palette-layer0'">palette-layer0</button>
-              <button class="btn" @click="sampleLayerPaletteClasses = 'palette-layer1'">palette-layer1</button>
-              <button class="btn" @click="sampleLayerPaletteClasses = 'palette-layer2'">palette-layer2</button>
+              <button class="btn" @click="previousPalette"><i class="fas fa-chevron-left"></i></button>
+              <button class="btn" @click="nextPalette"><i class="fas fa-chevron-right"></i></button>
             </div>
           </div>
         </div>
@@ -182,11 +179,9 @@ const sampleLayerScheme =
   /* ... */
 }`;
 
-const sampleLayerPaletteClasses = ref("palette-default");
-
 const sampleLayerPalette = computed(() =>
 `<!-- Change palette here; All colors change -->
-<div class="${sampleLayerPaletteClasses.value}">
+<div class="${currentPalette.value}">
 
   <button class="btn btn-main">Button</button>
   <input type="checkbox" class="checkbox" id="samplePalette" checked>
@@ -195,6 +190,24 @@ const sampleLayerPalette = computed(() =>
 
 </div>`
 );
+
+function nextPalette() {
+  currentPaletteIndex.value++;
+  if (currentPaletteIndex.value >= palettes.length) {
+    currentPaletteIndex.value = 0;
+  }
+}
+
+function previousPalette() {
+  currentPaletteIndex.value--;
+  if (currentPaletteIndex.value < 0) {
+    currentPaletteIndex.value = palettes.length - 1;
+  }
+}
+
+const currentPaletteIndex = ref(0);
+const currentPalette = computed(() => palettes[currentPaletteIndex.value]);
+const palettes = [ "palette-default", "palette-notice", "palette-layer0", "palette-layer1", "palette-layer2" ];
 
 const paletteExamplePalette = ref("");
 
