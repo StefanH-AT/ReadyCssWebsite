@@ -10,6 +10,8 @@ const routes: RouteRecordRaw[] = [
     { path: "/gallery/reel", component: () => import("./pages/gallery/ReelPage.vue"), name: "Reel" },
     { path: "/gallery/switcher", component: () => import("./pages/gallery/SwitcherPage.vue"), name: "Switcher" },
     { path: "/gallery/sidebar", component: () => import("./pages/gallery/SidebarPage.vue"), name: "Sidebar" },
+
+    { path: "/:pathMatch(.*)*", component: () => import("./pages/NotFoundPage.vue"), name: "Not Found" },
 ];
 
 export const router = createRouter({
