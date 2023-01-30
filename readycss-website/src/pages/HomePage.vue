@@ -234,6 +234,7 @@ section:not(:first-child) {
 .banner {
   display: grid;
   grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
   min-height: 80vh;
   min-height: 80dvh;
   align-items: center;
@@ -254,6 +255,7 @@ section:not(:first-child) {
 }
 .banner-hero--actions {
   display: flex;
+  flex-wrap: wrap;
   margin-block: 1rem;
   gap: 1rem;
   align-items: start;
