@@ -2,7 +2,7 @@
   <div class="code-sample" v-if="code">
     <div class="code-sample-content" v-if="shouldShowPreview" v-html="code">
     </div>
-    <pre class="code-sample-code"><code class="hljs" v-html="highlightedCode"></code></pre>
+    <pre class="code-sample-code"><code class="hljs dynamic-font-size" v-html="highlightedCode"></code></pre>
   </div>
   <div v-else class="card card-main">
     Missing <code>code</code> attribute in code block
@@ -57,6 +57,10 @@ const shouldShowPreview = computed(() => props.preview && props.lang.toLowerCase
   .code-sample-content + .code-sample-code > code {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+
+  .code-sample-code > code {
+    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   }
 
 }
