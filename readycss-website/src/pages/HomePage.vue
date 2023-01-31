@@ -4,7 +4,7 @@
   <section class="banner">
     <Switcher limit="2" threshold="70rem" space="6rem">
 
-      <div class="banner-hero">
+      <div class="banner-item banner-hero">
         <h2 class="banner-hero--title">ReadyCSS</h2>
         <p class="banner-hero--description">A CSS property management library and style base to kick off your new web project</p>
 
@@ -21,7 +21,7 @@
       </div>
 
 
-      <div class="showcase">
+      <div class="banner-item showcase">
         <h3>How it works</h3>
         <div class="showcase--card">
           <p>Assign themes and palettes to manage your site's colors</p>
@@ -235,13 +235,18 @@ section:not(:first-child) {
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
-  min-height: 80vh;
-  min-height: 80dvh;
-  align-items: center;
 }
 
-.banner-hero {
+.banner-item {
+  display: grid;
+  align-content: center;
+  min-height: 80vh;
+  min-height: 80dvh;
+
+  max-width: var(--page-width-reader);
+  margin-inline: auto;
 }
+
 .banner-hero--title {
   display: inline-block;
   font-size: clamp(2rem, 10vw, 4rem);
