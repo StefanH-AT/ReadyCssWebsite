@@ -239,6 +239,7 @@ section:not(:first-child) {
 
 .banner-item {
   display: grid;
+  grid-template-columns: 100%;
   align-content: center;
   min-height: 80vh;
   min-height: 80dvh;
