@@ -6,7 +6,7 @@
 
       <div class="banner-item banner-hero">
         <h2 class="banner-hero--title">ReadyCSS</h2>
-        <p class="banner-hero--description">A CSS property management library and style base to kick off your new web project</p>
+        <p class="banner-hero--description">A CSS kernel library and style base to kick off your new web project</p>
 
         <div class="banner-hero--actions">
           <router-link class="btn btn-main" to="/">Get Started</router-link>
@@ -250,7 +250,7 @@ section:not(:first-child) {
 
 .banner-hero--title {
   display: inline-block;
-  font-size: clamp(2rem, 10vw, 4rem);
+  font-size: clamp(2rem, 15vw, 6rem);
   background: linear-gradient(120deg, hsl(190, 70%, 50%), hsl(250, 80%, 55%));
   background-clip: text;
   color: transparent;
@@ -303,6 +303,10 @@ section:not(:first-child) {
   counter-increment: layer;
 
   box-shadow: 1rem 1rem 0 0 var(--scheme-surface-0);
+
+  &:first-of-type {
+    margin-top: 0;
+  }
 
   h3 {
     font-size: 1.4rem;
