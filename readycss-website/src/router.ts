@@ -1,10 +1,17 @@
-import {createRouter, createWebHistory, RouteRecordRaw} from "vue-router";
+import {createRouter, createWebHistory, RouteMeta, RouteRecordRaw} from "vue-router";
+
+const docsMeta: RouteMeta = {
+    layout: "docs"
+};
 
 const routes: RouteRecordRaw[] = [
     { path: "/", component: () => import("./pages/HomePage.vue"), name: "Color management library" },
-    { path: "/button", component: () => import("./pages/ButtonPage.vue"), name: "Buttons" },
-    { path: "/textinputs", component: () => import("./pages/InputTextPage.vue"), name: "Text Inputs" },
-    { path: "/checkbox", component: () => import("./pages/CheckboxPage.vue"), name: "Checkboxes" },
+
+    { path: "/docs", component: () => import("./pages/DocsPage.vue"), meta: docsMeta },
+    { path: "/docs/button", component: () => import("./pages/docs/ButtonPage.vue"), meta: docsMeta },
+    { path: "/docs/textinput", component: () => import("./pages/docs/InputTextPage.vue"), meta: docsMeta },
+    { path: "/docs/checkbox", component: () => import("./pages/docs/CheckboxPage.vue"), meta: docsMeta },
+
     { path: "/gallery", component: () => import("./pages/GalleryPage.vue"), name: "Gallery" },
     { path: "/gallery/palette", component: () => import("./pages/gallery/PalettePage.vue"), name: "Palettes" },
     { path: "/gallery/reel", component: () => import("./pages/gallery/ReelPage.vue"), name: "Reel" },

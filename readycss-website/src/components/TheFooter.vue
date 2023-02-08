@@ -58,8 +58,8 @@ footer {
   padding-inline: calc((100% - var(--page-width-reader)) / 2);
   margin-top: 5rem;
 
-  border-top: var(--border-width) solid var(--scheme-surface-0);
-  border-bottom: var(--border-width) solid var(--scheme-surface-0);
+  border-top: var(--stroke) solid var(--scheme-surface-0);
+  border-bottom: var(--stroke) solid var(--scheme-surface-0);
 
   h2 {
     font-size: 1rem;

@@ -357,7 +357,7 @@ section:not(:first-child) {
     width: 100%;
     font-size: 1.2rem;
     padding-bottom: 0.75rem;
-    border-bottom: var(--border-width) solid var(--scheme-surface-0);
+    border-bottom: var(--stroke) solid var(--scheme-surface-0);
   }
 }
 

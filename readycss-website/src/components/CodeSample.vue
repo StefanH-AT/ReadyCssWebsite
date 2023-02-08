@@ -42,12 +42,10 @@ const shouldShowPreview = computed(() => props.preview && props.lang.toLowerCase
 
 .code-sample {
 
-  --code-sample-spacer: var(--spacer);
-
   > .code-sample-content {
     background: var(--scheme-background);
-    padding: var(--code-sample-spacer);
-    border: var(--scheme-shade-7) solid var(--border-width);
+    padding: var(--space-xs);
+    border: var(--scheme-surface-0) solid var(--stroke);
     border-radius: var(--radius);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
@@ -60,7 +58,7 @@ const shouldShowPreview = computed(() => props.preview && props.lang.toLowerCase
   }
 
   .code-sample-code > code {
-    font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+    font-size: var(--step--1);
   }
 
 }

@@ -4,8 +4,6 @@
 
   flex-grow: 1;
 
-  --docs-spacer: calc(var(--spacer) * 3);
-
   h2, h3, h4 {
     --heading-color: var(--scheme-main);
     text-transform: uppercase;
@@ -31,7 +29,7 @@
     table-layout: fixed;
 
     thead > tr {
-      border-bottom: var(--table-line-color) solid var(--border-width);
+      border-bottom: var(--table-line-color) solid var(--stroke);
     }
 
     td, th {
@@ -55,15 +53,15 @@
 }
 
 .docs-group + .docs-group {
-  margin-top: var(--docs-spacer);
+  margin-top: var(--space-m);
 }
 
 // All components that are direct children of .docs-group, except for the last one
 :is(.docs-group, .docs-subgroup) > * + * {
-  margin-top: calc(var(--docs-spacer) * 0.25);
+  margin-top: var(--space-xs)
 }
 
 .docs-subgroup {
-  margin-top: var(--docs-spacer);
+  margin-top: var(--space-xs);
 }
 

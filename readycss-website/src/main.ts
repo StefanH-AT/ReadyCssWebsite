@@ -1,18 +1,12 @@
 import { createApp } from "vue";
-import themePlugin from "./plugins/theme-plugin";
+import themePlugin from "@/plugins/theme-plugin";
+import App from "@/App.vue";
 
 import "./scss/main.scss";
 
 import { router } from "./router";
 
-import TheNavbar from "./components/TheNavbar.vue";
-import TheFooter from "./components/TheFooter.vue";
-const app = createApp({
-    components: {
-        TheNavbar,
-        TheFooter
-    }
-});
+const app = createApp(App);
 
 app.use(router);
 app.use(themePlugin);

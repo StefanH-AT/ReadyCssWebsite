@@ -5,6 +5,7 @@
       <h1><router-link to="/">ReadyCSS</router-link></h1>
       <nav>
         <ul class="nav-list">
+          <li><router-link to="/docs">Docs</router-link></li>
           <li><router-link to="/gallery">Gallery</router-link></li>
           <li><a href="https://github.com/StefanH-AT/ReadyCss"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
@@ -25,7 +26,7 @@ import * as themePlugin from "@/plugins/theme-plugin";
 header {
   background-color: var(--scheme-surface-0);
   box-shadow: 0 0.1rem 0.75rem 0 var(--scheme-shadow);
-  padding-block: calc(var(--spacer) * 0.75);
+  padding-block: calc(var(--space-xs) * 0.75);
 }
 
 .nav {
@@ -47,12 +48,12 @@ header {
 nav {
   display: flex;
   align-items: center;
-  gap: var(--spacer);
+  gap: var(--space-xs);
 }
 
 .nav-list {
   display: flex;
-  gap: var(--spacer);
+  gap: var(--space-xs);
   list-style: none;
   padding-inline: 0;
 }
@@ -64,7 +65,7 @@ nav {
   cursor: pointer;
   color: var(--scheme-foreground);
 
-  border: var(--scheme-shade-6) solid var(--border-width);
+  border: var(--scheme-shade-6) solid var(--stroke);
   border-radius: 1000px;
   padding: 0.25rem 0.75rem;
 }

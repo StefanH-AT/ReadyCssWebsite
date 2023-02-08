@@ -31,14 +31,14 @@
     font-weight: bold;
     margin-bottom: var(--card-spacer);
     padding-bottom: var(--card-spacer);
-    border-bottom: var(--scheme-middleground) var(--border-width) solid;
+    border-bottom: var(--scheme-middleground) var(--stroke) solid;
   }
 
   footer {
     font-size: 0.75em;
     padding-top: var(--card-spacer);
     margin-top: var(--card-spacer);
-    border-top: var(--scheme-middleground) var(--border-width) solid;
+    border-top: var(--scheme-middleground) var(--stroke) solid;
   }
 
 
