@@ -4,10 +4,14 @@
   <div class="docs-group">
     <p>Checkboxes are created by adding add the <code>input-check</code> class to an HTML <code>input</code> of type <code>checkbox</code></p>
     <div class="callout">
-      <p>
+      <div class="callout-head">
         <strong>Hint:</strong>
-        It is important the label is assigned the <code>for</code> attribute. This way, the box can be toggled by clicking the label, which can make it easier to point to.
-      </p>
+      </div>
+      <div class="callout-body">
+        <p>
+          It is important the label is assigned the <code>for</code> attribute. This way, the box can be toggled by clicking the label, which can make it easier to point to.
+        </p>
+      </div>
     </div>
     <code-sample lang="html" preview :code="exampleSimple"/>
 
