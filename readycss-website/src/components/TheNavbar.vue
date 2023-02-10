@@ -6,8 +6,6 @@
       <nav>
         <ul class="nav-list">
           <li><router-link to="/docs">Docs</router-link></li>
-          <li><router-link to="/gallery">Gallery</router-link></li>
-          <li><a href="https://github.com/StefanH-AT/ReadyCss"><i class="fab fa-github"></i> GitHub</a></li>
         </ul>
         <button @click="themePlugin.toggleTheme()" class="switch-theme">{{ themePlugin.getThemeName() }}</button>
       </nav>
@@ -27,6 +25,9 @@ header {
   background-color: var(--scheme-surface-0);
   box-shadow: 0 0.1rem 0.75rem 0 var(--scheme-shadow);
   padding-block: calc(var(--space-xs) * 0.75);
+
+  position: sticky;
+  top: 0;
 }
 
 .nav {
@@ -46,7 +47,8 @@ header {
 }
 
 nav {
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
   align-items: center;
   gap: var(--space-xs);
 }
@@ -54,8 +56,17 @@ nav {
 .nav-list {
   display: flex;
   gap: var(--space-xs);
+  overflow-x: hidden;
   list-style: none;
   padding-inline: 0;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.nav-list--reveal {
+  flex-wrap: wrap;
 }
 
 .switch-theme {
