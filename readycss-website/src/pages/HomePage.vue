@@ -1,5 +1,5 @@
 <template>
-<main class="page page-widescreen">
+<main>
 
   <section class="banner">
     <Switcher limit="2" threshold="70rem" space="6rem">
