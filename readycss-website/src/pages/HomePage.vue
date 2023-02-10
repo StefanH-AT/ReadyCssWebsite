@@ -52,7 +52,7 @@
       <p class="colorsystem--head-caption"><strong>Layers in detail:</strong></p>
     </div>
 
-    <div>
+    <div class="colorsystem-layers">
 
       <div class="colorsystem--layer palette-layer0">
         <h3>Theme</h3>
@@ -73,15 +73,13 @@
         <p>Stuck in the middle, the palette layer's job is to transform colors for smaller areas on the site.</p>
 
         <strong>Example</strong>
-        <div>
-          <code-sample lang="html" :code="sampleLayerPalette" preview></code-sample>
+        <code-sample lang="html" :code="sampleLayerPalette" preview></code-sample>
 
-          <div class="colorsystem--layer-actions">
-            <strong>Switch palette</strong>
-            <div class="btn-group">
-              <button class="btn" @click="previousPalette"><i class="fas fa-chevron-left"></i></button>
-              <button class="btn" @click="nextPalette"><i class="fas fa-chevron-right"></i></button>
-            </div>
+        <div class="colorsystem--layer-actions">
+          <strong>Switch palette</strong>
+          <div class="btn-group">
+            <button class="btn" @click="previousPalette"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn" @click="nextPalette"><i class="fas fa-chevron-right"></i></button>
           </div>
         </div>
       </div>
@@ -217,8 +215,7 @@ const paletteExamplePalette = ref("");
 
 section {
 
-  margin-top: 2rem;
-  margin-bottom: 7rem;
+  margin-block: var(--space-m);
 
   h2 {
     color: var(--scheme-main);
@@ -250,38 +247,36 @@ section:not(:first-child) {
 
 .banner-hero--title {
   display: inline-block;
-  font-size: clamp(2rem, 15vw, 6rem);
+  font-size: clamp(2rem, 17vw, 6rem);
   background: linear-gradient(120deg, hsl(190, 70%, 50%), hsl(250, 80%, 55%));
   background-clip: text;
   color: transparent;
 }
 .banner-hero--description {
   color: var(--scheme-shade-3);
-  font-size: clamp(1rem, 5vw, 1.25rem);
+  font-size: var(--step-1);
+  margin-bottom: 0;
 }
 .banner-hero--actions {
+  --hero-action-space: var(--space-s);
   display: flex;
   flex-wrap: wrap;
-  margin-block: 1rem;
-  gap: 1rem;
+  margin-block: var(--hero-action-space);
+  gap: var(--hero-action-space);
   align-items: start;
 }
 .banner-footer {
   text-align: center;
-  font-size: 1.4em;
+  font-size: var(--step-2);
   color: var(--scheme-text-muted-color);
 }
 
 .showcase h3 {
-  font-size: 1.25rem;
+  font-size: var(--step-3);
   color: var(--scheme-main);
 }
 .showcase--card {
-  margin-bottom: 2rem;
-}
-
-.showcase--card-actions {
-  margin-top: 0.5rem;
+  margin-bottom: var(--space-m);
 }
 
 .colorsystem {
@@ -289,13 +284,24 @@ section:not(:first-child) {
 }
 
 .colorsystem h2 {
-  margin-bottom: 2rem;
+  margin-bottom: var(--space-s);
+}
+
+.colorsystem-layers {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  gap: var(--space-xl);
 }
 
 .colorsystem--layer {
 
-  margin-block: 6rem;
-  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-flow: row;
+  gap: var(--space-s);
+
+  padding: var(--space-s-l);
   border-radius: var(--radius);
   background: var(--scheme-main);
   position: relative;
@@ -304,59 +310,33 @@ section:not(:first-child) {
 
   box-shadow: 1rem 1rem 0 0 var(--scheme-surface-0);
 
-  &:first-of-type {
-    margin-top: 0;
-  }
 
   h3 {
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
+    font-size: var(--step-1);
     text-transform: uppercase;
-  }
-
-  p {
-    margin-bottom: 1.5rem;
-  }
-
-  &::before {
-    content: "" counter(layer);
-
-    position: absolute;
-    left: -3rem;
-    top: 0;
-    font-size: 1.4rem;
-    width: 2rem;
-    height: 2rem;
-    display: grid;
-    place-items: center;
-    border-radius: 100%;
-    background-color: var(--scheme-main);
-    text-shadow: 0.1rem 0.1rem 0rem var(--scheme-shadow);
-    box-shadow: 0 0.1rem 0.15rem 0 var(--scheme-shadow);
   }
 }
 
 .colorsystem--layer-actions {
-  margin-block: 0.5rem;
   strong {
     display: block;
   }
 }
 
 .components-groups {
-  margin-block: 4rem;
+  margin-block: var(--space-m);
 }
 
 .components--group {
   display: grid;
-  gap: 0.75rem;
+  gap: var(--space-xs);
   justify-items: start;
   align-content: start;
 
   h3 {
     width: 100%;
-    font-size: 1.2rem;
-    padding-bottom: 0.75rem;
+    font-size: var(--step-1);
+    padding-bottom: var(--space-xs);
     border-bottom: var(--stroke) solid var(--scheme-surface-0);
   }
 }
