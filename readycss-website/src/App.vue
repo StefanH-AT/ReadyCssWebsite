@@ -14,10 +14,11 @@ const route = useRoute();
 
 const currentLayout = computed(() => {
   switch (route.meta.layout) {
-    case "default":
-      return DefaultLayout;
     case "docs":
       return DocsLayout;
+    case "default":
+    default:
+      return DefaultLayout;
   }
 });
 
