@@ -289,7 +289,7 @@ section:not(:first-child) {
 
 .colorsystem-layers {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-auto-flow: row;
   gap: var(--space-xl);
 }
@@ -297,7 +297,7 @@ section:not(:first-child) {
 .colorsystem--layer {
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   grid-auto-flow: row;
   gap: var(--space-s);
 
