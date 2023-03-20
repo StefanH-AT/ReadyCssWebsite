@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts" setup>
-import Sidebar from "@/components/layout/Sidebar.vue";
+import Sidebar from "@/readyvue/layout/Sidebar.vue";
 </script>
 
 <style scoped>

@@ -149,7 +149,7 @@
 </template>
 
 <script lang="ts" setup>
-import Switcher from "@/components/layout/Switcher.vue";
+import Switcher from "@/readyvue/layout/Switcher.vue";
 import CodeSample from "@/components/CodeSample.vue";
 import * as theme from "@/plugins/theme-plugin";
 import {computed, ref} from "vue";

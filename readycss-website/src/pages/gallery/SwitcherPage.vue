@@ -39,7 +39,7 @@
 
 <script lang="ts" setup>
 import "../../components/layout/Switcher.vue"
-import Switcher from "@/components/layout/Switcher.vue";
+import Switcher from "@/readyvue/layout/Switcher.vue";
 
 </script>
 
@@ -47,7 +47,7 @@ import Switcher from "@/components/layout/Switcher.vue";
 
 .item {
   background-color: var(--scheme-surface-0);
-  padding: var(--spacer);
+  padding: var(--space-m);
 }
 
 .item-wide {
