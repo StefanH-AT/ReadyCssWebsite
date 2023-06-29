@@ -150,8 +150,8 @@
 
 <script lang="ts" setup>
 import Switcher from "@/readyvue/layout/Switcher.vue";
-import CodeSample from "@/components/CodeSample.vue";
-import * as theme from "@/plugins/theme-plugin";
+import CodeSample from "../../docs/.vitepress/theme/CodeSample.vue";
+import * as theme from "@/../../docs/.vitepress/theme/plugins/theme-plugin";
 import {computed, ref} from "vue";
 import SwitcherPage from "@/pages/gallery/SwitcherPage.vue";
 

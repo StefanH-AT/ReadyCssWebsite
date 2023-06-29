@@ -7,8 +7,8 @@
 <script lang="ts" setup>
 import {useRoute} from "vue-router";
 import {computed} from "vue";
-import DefaultLayout from "@/layouts/DefaultLayout.vue";
-import DocsLayout from "@/layouts/DocsLayout.vue";
+import DefaultLayout from "../docs/.vitepress/theme/layouts/DefaultLayout.vue";
+import DocsLayout from "../docs/.vitepress/theme/layouts/DocsLayout.vue";
 
 const route = useRoute();
 

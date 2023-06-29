@@ -67,7 +67,7 @@
 </template>
 
 <script lang="ts" setup>
-import CodeSample from "@/components/CodeSample.vue";
+import CodeSample from "../../../docs/.vitepress/theme/CodeSample.vue";
 const examples = {
   simple:
   `<button class="btn">Button</button>

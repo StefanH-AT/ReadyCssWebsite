@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-import * as themePlugin from "@/plugins/theme-plugin";
+import * as themePlugin from "./plugins/theme-plugin";
 
 </script>
 

@@ -1,8 +1,8 @@
 import { createApp } from "vue";
-import themePlugin from "@/plugins/theme-plugin";
+import themePlugin from "@/../docs/.vitepress/theme/plugins/theme-plugin";
 import App from "@/App.vue";
 
-import "./scss/main.scss";
+import "../docs/.vitepress/theme/scss/main.scss";
 
 import { router } from "./router";
 

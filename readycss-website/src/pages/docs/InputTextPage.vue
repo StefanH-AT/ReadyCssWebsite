@@ -39,7 +39,7 @@
 
 <script lang="ts">
 
-import CodeSample from "@/components/CodeSample.vue";
+import CodeSample from "../../../docs/.vitepress/theme/CodeSample.vue";
 export default {
   components: {CodeSample},
   data() {

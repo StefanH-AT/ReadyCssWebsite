@@ -1,6 +1,3 @@
-[submodule "readycss-website/src/scss/readycss"]
-	path = readycss-website/src/scss/readycss
-	url = https://github.com/StefanH-AT/ReadyCss.git
 [submodule "readycss-website/src/readyvue"]
 	path = readycss-website/src/readyvue
 	url = https://github.com/StefanH-AT/ReadyVue.git
