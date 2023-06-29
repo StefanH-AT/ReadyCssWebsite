@@ -11,6 +11,7 @@ const routes: RouteRecordRaw[] = [
     { path: "/docs/button", component: () => import("@/pages/docs/ButtonPage.vue"), meta: docsMeta },
     { path: "/docs/textinput", component: () => import("@/pages/docs/InputTextPage.vue"), meta: docsMeta },
     { path: "/docs/checkbox", component: () => import("@/pages/docs/CheckboxPage.vue"), meta: docsMeta },
+    { path: "/docs/switch", component: () => import("@/pages/docs/SwitchPage.vue"), meta: docsMeta },
 
     { path: "/gallery", component: () => import("@/pages/GalleryPage.vue"), name: "Gallery" },
     { path: "/gallery/palette", component: () => import("@/pages/gallery/PalettePage.vue"), name: "Palettes" },

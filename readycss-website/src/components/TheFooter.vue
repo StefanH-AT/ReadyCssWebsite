@@ -41,7 +41,7 @@
 
 <script lang="ts" setup>
 import {computed} from "vue";
-import Switcher from "@/components/layout/Switcher.vue";
+import Switcher from "@/readyvue/layout/Switcher.vue";
 
 const currentYear = computed(() => new Date().getFullYear());
 </script>
