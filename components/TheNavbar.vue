@@ -7,7 +7,7 @@
         <ul class="nav-list">
           <li><a href="/getting-started">Get Started</a></li>
         </ul>
-        <button @click="themePlugin.toggleTheme()" class="switch-theme">{{ themePlugin.getThemeName() }}</button>
+        <button class="switch-theme">Theme</button>
       </nav>
     </div>
 
@@ -15,8 +15,6 @@
 </template>
 
 <script lang="ts" setup>
-import * as themePlugin from "../readycss-website/docs/.vitepress/theme/plugins/theme-plugin";
-
 </script>
 
 <style scoped lang="scss">

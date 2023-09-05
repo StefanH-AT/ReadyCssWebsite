@@ -1,0 +1,46 @@
+:root {
+  --card-spacer: var(--spacer);
+  --card-bg: var(--scheme-background);
+}
+
+.card {
+  background-color: var(--card-bg);
+
+  padding: var(--card-spacer);
+  color: var(--scheme-foreground);
+
+  border-radius: var(--radius);
+
+  &::selection, *::selection {
+    background-color: var(--scheme-foreground);
+    color: var(--card-bg);
+  }
+
+  &.card-main {
+    --card-bg: var(--scheme-main);
+    color: var(--scheme-background);
+
+    .btn {
+      --btn-color: var(--scheme-background);
+      --btn-text-color: var(--scheme-main);
+    }
+  }
+
+  header {
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-bottom: var(--card-spacer);
+    padding-bottom: var(--card-spacer);
+    border-bottom: var(--scheme-middleground) var(--stroke) solid;
+  }
+
+  footer {
+    font-size: 0.75em;
+    padding-top: var(--card-spacer);
+    margin-top: var(--card-spacer);
+    border-top: var(--scheme-middleground) var(--stroke) solid;
+  }
+
+
+
+}

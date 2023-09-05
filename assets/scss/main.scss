@@ -1,0 +1,12 @@
+@use "ready/all" as readycss;
+
+@use "palettes";
+@use "components";
+@use "docs";
+
+@use "fonts";
+@use "util";
+
+:root {
+  font-size: 16px;
+}

@@ -37,16 +37,10 @@
 
 </template>
 
-<script lang="ts">
-
-import CodeSample from "../../../../components/CodeSample.vue";
-export default {
-  components: {CodeSample},
-  data() {
-    return {
-      exampleSimple: `<input type="text" class="text-input" placeholder="Enter text..."/>`,
-      exampleUnderline: `<input type="text" class="text-input text-input-underline" placeholder="Enter text...">`,
-      exampleShift:
+<script lang="ts" setup>
+const exampleSimple = `<input type="text" class="text-input" placeholder="Enter text..."/>`;
+const exampleUnderline = `<input type="text" class="text-input text-input-underline" placeholder="Enter text...">`;
+const exampleShift =
 `<div class="text-input-shift-wrapper">
   <input type="text" class="text-input" placeholder="">
   <label>Enter text...</label>
@@ -54,8 +48,5 @@ export default {
 <div class="text-input-shift-wrapper">
   <input type="text" class="text-input text-input-underline" placeholder="">
   <label>Enter text...</label>
-</div>`
-    }
-  }
-}
+</div>`;
 </script>

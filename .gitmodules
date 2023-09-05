@@ -4,3 +4,9 @@
 [submodule "readycss-website/readyvue"]
 	path = readycss-website/readyvue
 	url = https://github.com/StefanH-AT/ReadyVue.git
+[submodule "assets/scss/ready"]
+	path = assets/scss/ready
+	url = https://github.com/StefanH-AT/ReadyCss.git
+[submodule "components/ready"]
+	path = components/ready
+	url = https://github.com/StefanH-AT/ReadyVue.git

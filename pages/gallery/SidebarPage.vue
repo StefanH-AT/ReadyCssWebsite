@@ -3,7 +3,7 @@
   <h2>Sidebar</h2>
   <p>These are sidebars</p>
 
-  <Sidebar side="left" sidebar-width="10rem" content-min-width="60%" space="3rem">
+  <ReadySidebar side="left" sidebar-width="10rem" content-min-width="60%" space="3rem">
     <template v-slot:sidebar>
       <h3>Sidebar on left</h3>
       <ul>
@@ -19,11 +19,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisl vitae nisl aliquet, nec aliquet nisl aliquet.
       </p>
     </template>
-  </Sidebar>
+  </ReadySidebar>
 
   <hr>
 
-  <Sidebar side="right" sidebar-width="10rem" content-min-width="60%" space="3rem">
+  <ReadySidebar side="right" sidebar-width="10rem" content-min-width="60%" space="3rem">
     <template v-slot:sidebar>
       <h3>Sidebar on right</h3>
       <ul>
@@ -39,12 +39,11 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod nisl vitae nisl aliquet, nec aliquet nisl aliquet.
       </p>
     </template>
-  </Sidebar>
+  </ReadySidebar>
 
 </template>
 
 <script lang="ts" setup>
-import Sidebar from "@/readyvue/layout/Sidebar.vue";
 </script>
 
 <style scoped>

@@ -3,7 +3,7 @@
   <div class="sitemap">
     <h2>More</h2>
 
-    <Switcher threshold="30rem" space="2rem" limit="3">
+    <ReadySwitcher threshold="30rem" space="2rem" limit="3">
 
       <div class="sitemap--group">
         <h3>Repositories</h3>
@@ -29,7 +29,7 @@
         </ul>
       </div>
 
-    </Switcher>
+    </ReadySwitcher>
 
 
   </div>
@@ -40,9 +40,6 @@
 </template>
 
 <script lang="ts" setup>
-import {computed} from "vue";
-import Switcher from "../readycss-website/readyvue/layout/Switcher.vue";
-
 const currentYear = computed(() => new Date().getFullYear());
 </script>
 

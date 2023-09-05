@@ -31,7 +31,6 @@
 </template>
 
 <script lang="ts">
-import CodeSample from "../../../../components/CodeSample.vue";
 export default {
   components: {CodeSample},
   data() {

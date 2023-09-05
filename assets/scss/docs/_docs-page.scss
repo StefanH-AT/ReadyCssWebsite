@@ -1,0 +1,65 @@
+
+.docs {
+
+  flex-grow: 1;
+
+  h2, h3, h4 {
+    --heading-color: var(--scheme-main);
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-weight: normal;
+    text-transform: none;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  table {
+
+    --table-spacer: calc(var(--spacer) * 0.75);
+    --table-line-color: var(--scheme-shade-6);
+
+    width: 100%;
+    padding: var(--table-spacer);
+    border-radius: var(--radius);
+    table-layout: fixed;
+
+    thead > tr {
+      border-bottom: var(--table-line-color) solid var(--stroke);
+    }
+
+    td, th {
+      padding: var(--table-spacer);
+    }
+
+    th {
+      font-weight: bold;
+      text-align: left;
+    }
+
+    tr:nth-child(2n) {
+      background-color: var(--scheme-shade-7);
+    }
+
+  }
+}
+
+.docs-group {
+  display: flow-root;
+}
+
+.docs-group + .docs-group {
+  margin-top: var(--space-m);
+}
+
+// All components that are direct children of .docs-group, except for the last one
+:is(.docs-group, .docs-subgroup) > * + * {
+  margin-top: var(--space-xs)
+}
+
+.docs-subgroup {
+  margin-top: var(--space-xs);
+}

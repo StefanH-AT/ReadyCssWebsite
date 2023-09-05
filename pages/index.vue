@@ -1,8 +1,7 @@
 <template>
-<main>
 
   <section class="banner">
-    <Switcher limit="2" threshold="70rem" space="6rem">
+    <ReadySwitcher limit="2" threshold="70rem" space="6rem">
 
       <div class="banner-item banner-hero">
         <h2 class="banner-hero--title">ReadyCSS</h2>
@@ -34,7 +33,7 @@
         </div>
       </div>
 
-    </Switcher>
+    </ReadySwitcher>
 
     <div class="banner-footer">
       <i class="fa-solid fa-chevron-down"></i>
@@ -63,7 +62,7 @@
 
         <div class="colorsystem--layer-actions">
           <strong>Try it!</strong>
-          <button class="btn" @click="theme.toggleTheme()">Toggle theme</button>
+          <button class="btn" >Toggle theme</button>
         </div>
       </div>
 
@@ -105,7 +104,7 @@
     <p>Many common components which appear in almost any project are accessible in the (optional) ReadyCSS component library</p>
 
     <div class="components-groups">
-      <Switcher limit="3" threshold="30rem" space="2rem">
+      <ReadySwitcher limit="3" threshold="30rem" space="2rem">
 
         <div class="components--group">
           <h3>Buttons</h3>
@@ -152,18 +151,14 @@
           </div>
         </div>
 
-      </Switcher>
+      </ReadySwitcher>
     </div>
 
   </section>
 
-</main>
 </template>
 
 <script lang="ts" setup>
-import Switcher from "../../../readyvue/layout/Switcher.vue";
-import CodeSample from "./CodeSample.vue";
-import {computed, ref} from "vue";
 
 const sampleBodyThemePalette =
 `<div class=\"theme-dark palette-default\">
@@ -276,7 +271,7 @@ section:not(:first-child) {
   flex-wrap: wrap;
   margin-block: var(--hero-action-space);
   gap: var(--hero-action-space);
-  align-items: start;
+  align-items: flex-start;
 }
 .banner-footer {
   text-align: center;

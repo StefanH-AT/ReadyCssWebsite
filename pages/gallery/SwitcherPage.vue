@@ -5,41 +5,39 @@
     Unlike media query breakpoints, switchers operate on the <strong>container's</strong> size instead of an arbitrary screen size
   which allows for more flexibility.</p>
 
-  <Switcher limit="4" threshold="40rem" space="2rem">
+  <ReadySwitcher limit="4" threshold="40rem" space="2rem">
     <div class="item">Lorem ipsum</div>
     <div class="item">Lorem ipsum</div>
     <div class="item">Lorem ipsum</div>
     <div class="item">Lorem ipsum</div>
-  </Switcher>
+  </ReadySwitcher>
 
   <h3>Switcher with children of variable width</h3>
-  <Switcher limit="4" threshold="40rem" space="2rem">
+  <ReadySwitcher limit="4" threshold="40rem" space="2rem">
     <div class="item">Lorem ipsum</div>
     <div class="item item-wide">Lorem ipsum</div>
-  </Switcher>
+  </ReadySwitcher>
 
   <h3>Different thresholds</h3>
 
-  <Switcher limit="5" threshold="20rem" space="2rem">
+  <ReadySwitcher limit="5" threshold="20rem" space="2rem">
     <div class="item">Lorem ipsum</div>
     <div class="item">Lorem ipsum</div>
     <div class="item">Lorem ipsum</div>
-  </Switcher>
+  </ReadySwitcher>
 
   <hr/>
 
-  <Switcher limit="5" threshold="40rem" space="2rem">
-  <div class="item">Lorem ipsum</div>
-  <div class="item">Lorem ipsum</div>
-  <div class="item">Lorem ipsum</div>
-</Switcher>
+  <ReadySwitcher limit="5" threshold="40rem" space="2rem">
+    <div class="item">Lorem ipsum</div>
+    <div class="item">Lorem ipsum</div>
+    <div class="item">Lorem ipsum</div>
+  </ReadySwitcher>
 
 
 </template>
 
 <script lang="ts" setup>
-import "../../components/layout/Switcher.vue"
-import Switcher from "@/readyvue/layout/Switcher.vue";
 
 </script>
 

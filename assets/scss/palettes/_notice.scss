@@ -1,0 +1,14 @@
+.palette-notice {
+  --scheme-main: var(--palette-notice-main);
+  --scheme-main-hover: var(--palette-notice-main-hover);
+}
+
+.theme-light {
+  --palette-notice-main: hsl(33, 100%, 50%);
+  --palette-notice-main-hover: hsl(33, 100%, 45%);
+}
+
+.theme-dark {
+  --palette-notice-main: hsl(39, 100%, 50%);
+  --palette-notice-main-hover: hsl(39, 100%, 45%);
+}

@@ -4,7 +4,20 @@ export default defineNuxtConfig({
       "@nuxt/content"
   ],
   devtools: { enabled: true },
-  content: {
-
-  }
+  components: [
+    "~/components",
+    {
+      path: "~/components/ready/layout",
+      prefix: "Ready"
+    }
+  ],
+  app: {
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1"
+    }
+  },
+  css: [
+      "assets/scss/main.scss"
+  ]
 })
